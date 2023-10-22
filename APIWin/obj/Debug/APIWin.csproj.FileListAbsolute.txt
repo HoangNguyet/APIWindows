@@ -1,0 +1,10 @@
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\bin\Debug\APIWin.exe.config
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\bin\Debug\APIWin.exe
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\bin\Debug\APIWin.pdb
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.csproj.AssemblyReference.cache
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.csproj.SuggestedBindingRedirects.cache
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.Properties.Resources.resources
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.csproj.GenerateResource.cache
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.csproj.CoreCompileInputs.cache
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.exe
+D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.pdb
