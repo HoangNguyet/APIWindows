@@ -8,3 +8,14 @@ D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.csproj.GenerateR
 D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.csproj.CoreCompileInputs.cache
 D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.exe
 D:\university\Nam III\NLHDH\code\APIWin\APIWin\obj\Debug\APIWin.pdb
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\bin\Debug\APIWin.exe.config
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\bin\Debug\APIWin.exe
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\bin\Debug\APIWin.pdb
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.csproj.AssemblyReference.cache
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.csproj.SuggestedBindingRedirects.cache
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.Properties.Resources.resources
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.csproj.GenerateResource.cache
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.csproj.CoreCompileInputs.cache
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.exe
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.pdb
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.Form1.resources

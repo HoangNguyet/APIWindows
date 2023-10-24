@@ -2,10 +2,17 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.InteropServices;
+using APIWin;
 
 class Program
 {
-    [DllImport("shell32.dll", CharSet = CharSet.Auto)]
+    static void Main()
+    {
+        Form1 form = new Form1();
+        Application.Run(form);
+    }
+
+    /*[DllImport("shell32.dll", CharSet = CharSet.Auto)]  
     public static extern IntPtr ShellExecute(IntPtr hwnd, string lpOperation, string lpFile, string lpParameters, string lpDirectory, int nShowCmd);
 
     [STAThread]
@@ -46,5 +53,5 @@ class Program
         {
             MessageBox.Show("Tệp không tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-    }
+    }*/
 }
