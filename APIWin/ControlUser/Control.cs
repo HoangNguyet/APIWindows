@@ -8,7 +8,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 using System.Windows.Forms;
+using APIWin.data;
+using System.IO;
 
 namespace APIWin.ControlUser
 {
@@ -47,6 +50,22 @@ namespace APIWin.ControlUser
         {
             String notify = deteFile.deleteFileEx(_namePath);
             MessageBox.Show(notify);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            String PathFto = Interaction.InputBox("Copy to");
+            if (PathFto != "")
+            {
+                CpFile.CopyFileEX(_namePath, PathFto);
+            }
+        }
+
+        private void cp_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            PAThFileCp.pathFile = _namePath;
         }
     }
 }

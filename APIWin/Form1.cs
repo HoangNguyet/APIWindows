@@ -15,6 +15,7 @@ using System.Diagnostics;
 using APIWin.module;
 using static APIWin.module.WIN32_DATA;
 using APIWin.ControlUser;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace APIWin
 {
@@ -32,11 +33,11 @@ namespace APIWin
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            pathName = null;
             string path = TxTPath.Text;
             pathName += path;
             List<listString.StringValue> list = new List<listString.StringValue>();
-            fileContaner = SearchFile.getFile(path);
+            fileContaner = SearchFile.getFile(pathName);
             foreach (var item in fileContaner)
             {
                 listString.StringValue temp = new listString.StringValue(item.cFileName);
@@ -52,10 +53,11 @@ namespace APIWin
                 int index = e.RowIndex;
 
                 string nameFile = data.Rows[index].Cells[0].Value.ToString();
-                string pathN = pathName + "\\" + nameFile;
+                string pathN = pathName + "\\" + nameFile;      
                 OpenFile.OpenFileEX(pathN);
+                pathN = null;
             }
-            catch { }
+            catch {}
         }
         public static long ConvertFileTimeToLong(System.Runtime.InteropServices.ComTypes.FILETIME fileTime)
         {
@@ -78,8 +80,16 @@ namespace APIWin
                     {
                         pr.ShowDialog();
                     }
+                    pathN = null;
                 }
-                catch { }
+                catch { 
+                
+                    using(ControlFolder cf = new ControlFolder(pathName))
+                    {
+                        cf.ShowDialog();
+                    }
+                
+                }
             }
         }
         private void button1_Click(object sender, EventArgs e)

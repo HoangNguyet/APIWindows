@@ -17,7 +17,7 @@ namespace APIWin.module
         {
             if (File.Exists(filePath))
             {
-                ShellExecute(IntPtr.Zero, "open", filePath, null, null, 1);
+                ShellExecute(IntPtr.Zero, "open", filePath, null, null, 5);
             }
             else
             {
