@@ -39,5 +39,13 @@ namespace APIWin.ControlUser
             this.Hide();
             CpFile.CopyFileEX(PAThFileCp.pathFile, _PathFto);
         }
+
+        private void CreateFileX_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            String newFile = Interaction.InputBox("Create File");
+            CreateFil.CreateFile(_PathFto, newFile);
+
+        }
     }
 }

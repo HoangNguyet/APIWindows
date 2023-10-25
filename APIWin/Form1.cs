@@ -16,15 +16,15 @@ using APIWin.module;
 using static APIWin.module.WIN32_DATA;
 using APIWin.ControlUser;
 using Microsoft.VisualBasic.ApplicationServices;
+using static APIWin.module.CreateFil;
 
 namespace APIWin
 {
     public partial class Form1 : Form
     {
-        [DllImport("winbase.h")]
-        public static extern bool CopyFile(string lpExistingFileName, string lpNewFileName, bool bFail);
         private List<WIN32_FIND_DATA> fileContaner = new List<WIN32_FIND_DATA>();
         private string pathName;
+
         public Form1()
         {
             InitializeComponent();
