@@ -67,12 +67,14 @@
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data.Location = new System.Drawing.Point(341, -2);
             this.data.Name = "data";
+            this.data.ReadOnly = true;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
             this.data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.data.Size = new System.Drawing.Size(461, 451);
             this.data.TabIndex = 0;
             this.data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CellClick);
+            this.data.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.data_CellMouseClick);
             // 
             // Form1
             // 

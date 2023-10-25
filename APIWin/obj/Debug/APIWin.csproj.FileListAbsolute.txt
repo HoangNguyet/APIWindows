@@ -19,3 +19,5 @@ C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.csproj.CoreCo
 C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.exe
 C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.pdb
 C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.Form1.resources
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.ControlUser.Control.resources
+C:\Users\Le Khac Ninh 2\Desktop\APIWindows\APIWin\obj\Debug\APIWin.ControlUser.Propertie.resources

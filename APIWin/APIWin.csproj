@@ -46,18 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlUser\Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlUser\Control.Designer.cs">
+      <DependentUpon>Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlUser\Propertie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlUser\Propertie.Designer.cs">
+      <DependentUpon>Propertie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="module\ConvertsFileTime.cs" />
+    <Compile Include="module\FindObject.cs" />
     <Compile Include="module\listString.cs" />
     <Compile Include="module\OpenFile.cs" />
     <Compile Include="module\SearchFile.cs" />
     <Compile Include="module\WIN32-DATA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlUser\Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlUser\Propertie.resx">
+      <DependentUpon>Propertie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
