@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 512);
+            this.ClientSize = new System.Drawing.Size(558, 518);
             this.Controls.Add(this.path);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.AccassedX);
@@ -154,6 +154,8 @@
             this.Controls.Add(this.SizeX);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MaximizeBox = false;
             this.Name = "Propertie";
             this.Text = "Properties";
             this.Load += new System.EventHandler(this.Propertie_Load);

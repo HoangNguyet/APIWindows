@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnProperties = new System.Windows.Forms.Button();
+            this.deleteFileX = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProperties
@@ -41,15 +42,26 @@
             this.btnProperties.UseVisualStyleBackColor = true;
             this.btnProperties.Click += new System.EventHandler(this.btnProperties_Click);
             // 
-            // Properti
+            // deleteFileX
+            // 
+            this.deleteFileX.Location = new System.Drawing.Point(13, 113);
+            this.deleteFileX.Name = "deleteFileX";
+            this.deleteFileX.Size = new System.Drawing.Size(141, 23);
+            this.deleteFileX.TabIndex = 2;
+            this.deleteFileX.Text = "DeleteFile";
+            this.deleteFileX.UseVisualStyleBackColor = true;
+            this.deleteFileX.Click += new System.EventHandler(this.deleteFileX_Click);
+            // 
+            // Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(166, 177);
+            this.Controls.Add(this.deleteFileX);
             this.Controls.Add(this.btnProperties);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Name = "Properti";
+            this.Name = "Control";
             this.Text = "Properti";
             this.Load += new System.EventHandler(this.Properti_Load);
             this.ResumeLayout(false);
@@ -58,5 +70,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnProperties;
+        private System.Windows.Forms.Button deleteFileX;
     }
 }

@@ -42,5 +42,11 @@ namespace APIWin.ControlUser
                 pr.ShowDialog();
             }
         }
+
+        private void deleteFileX_Click(object sender, EventArgs e)
+        {
+            String notify = deteFile.deleteFileEx(_namePath);
+            MessageBox.Show(notify);
+        }
     }
 }

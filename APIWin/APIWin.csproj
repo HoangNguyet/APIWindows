@@ -64,7 +64,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="module\Class1.cs" />
     <Compile Include="module\ConvertsFileTime.cs" />
+    <Compile Include="module\deteFile.cs" />
     <Compile Include="module\FindObject.cs" />
     <Compile Include="module\listString.cs" />
     <Compile Include="module\OpenFile.cs" />
