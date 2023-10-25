@@ -36,7 +36,15 @@ namespace APIWin
                 listString.StringValue temp = new listString.StringValue(item.cFileName);
                 list.Add(temp);
             }
-            dataGridView1.DataSource = list;
+            data.DataSource = list;
+        }
+
+        private void data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            string nameFile = data.Rows[index].Cells[0].Value.ToString();
+            String pathName = TxTPath.Text +"\\"+ nameFile;
+            OpenFile.OpenFileEX(pathName);
         }
     }
 }

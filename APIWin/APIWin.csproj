@@ -53,6 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="module\listString.cs" />
+    <Compile Include="module\OpenFile.cs" />
     <Compile Include="module\SearchFile.cs" />
     <Compile Include="module\WIN32-DATA.cs" />
     <Compile Include="Program.cs" />
