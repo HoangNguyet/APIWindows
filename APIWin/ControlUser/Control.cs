@@ -67,5 +67,28 @@ namespace APIWin.ControlUser
             this.Close();
             PAThFileCp.pathFile = _namePath;
         }
+
+        private void btnReName_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            int index = _namePath.LastIndexOf(@"\");
+            string nameFIle = _namePath.Substring(index+1,_namePath.Length - index-1);
+            string name = Interaction.InputBox("Name File", "Rename File", nameFIle);
+            if (name == "" || name == null)
+            {
+                
+            }
+            else
+            {
+                if(name == nameFIle)
+                {
+
+                }
+                else
+                {
+                    RenameFileP.RenameFile(_namePath, name);
+                }
+            }
+        }
     }
 }

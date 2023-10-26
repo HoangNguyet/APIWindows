@@ -39,7 +39,7 @@ namespace APIWin.ControlUser
             {
                 sizeZ = (s.ToString() + " bytes (") + s.ToString() + " bytes)"; ;
             }
-            nameFile.Text = _file.cFileName;
+            lbName.Text = _file.cFileName;
             path.Text = _namePath;
             SizeX.Text = sizeZ;
             DateTime dt = new DateTime();

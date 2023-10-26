@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SizeX = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.nameFile = new System.Windows.Forms.Label();
             this.CreatedX = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.AccassedX = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.path = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,18 +65,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 16);
+            this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tên";
-            // 
-            // nameFile
-            // 
-            this.nameFile.AutoSize = true;
-            this.nameFile.Location = new System.Drawing.Point(163, 139);
-            this.nameFile.Name = "nameFile";
-            this.nameFile.Size = new System.Drawing.Size(44, 16);
-            this.nameFile.TabIndex = 3;
-            this.nameFile.Text = "label3";
+            this.label2.Text = "Tên file";
             // 
             // CreatedX
             // 
@@ -138,23 +129,31 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Đường dẫn";
             // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(166, 139);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(55, 16);
+            this.lbName.TabIndex = 10;
+            this.lbName.Text = "lbName";
+            // 
             // Propertie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 518);
+            this.Controls.Add(this.lbName);
             this.Controls.Add(this.path);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.AccassedX);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CreatedX);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.nameFile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SizeX);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.Name = "Propertie";
             this.Text = "Properties";
@@ -169,12 +168,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label SizeX;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label nameFile;
         private System.Windows.Forms.Label CreatedX;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label AccassedX;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label path;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbName;
     }
 }

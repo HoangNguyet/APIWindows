@@ -32,6 +32,7 @@
             this.deleteFileX = new System.Windows.Forms.Button();
             this.cpTo = new System.Windows.Forms.Button();
             this.cp = new System.Windows.Forms.Button();
+            this.btnReName = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProperties
@@ -74,11 +75,22 @@
             this.cp.UseVisualStyleBackColor = true;
             this.cp.Click += new System.EventHandler(this.cp_Click);
             // 
+            // btnReName
+            // 
+            this.btnReName.Location = new System.Drawing.Point(12, 73);
+            this.btnReName.Name = "btnReName";
+            this.btnReName.Size = new System.Drawing.Size(137, 23);
+            this.btnReName.TabIndex = 5;
+            this.btnReName.Text = "Rename File";
+            this.btnReName.UseVisualStyleBackColor = true;
+            this.btnReName.Click += new System.EventHandler(this.btnReName_Click);
+            // 
             // Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(163, 224);
+            this.Controls.Add(this.btnReName);
             this.Controls.Add(this.cp);
             this.Controls.Add(this.cpTo);
             this.Controls.Add(this.deleteFileX);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.Button deleteFileX;
         private System.Windows.Forms.Button cpTo;
         private System.Windows.Forms.Button cp;
+        private System.Windows.Forms.Button btnReName;
     }
 }
