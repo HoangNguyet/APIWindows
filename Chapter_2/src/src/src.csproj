@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\process.cs" />
+    <Compile Include="data\result_after_algorithm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +56,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scheduling-algorithms\FCFS\form\form-property.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scheduling-algorithms\FCFS\form\form-property.Designer.cs">
+      <DependentUpon>form-property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scheduling-algorithms\FCFS\until\fcfs.cs" />
+    <Compile Include="scheduling-algorithms\form-scheduling-algorithm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scheduling-algorithms\form-scheduling-algorithm.Designer.cs">
+      <DependentUpon>form-scheduling-algorithm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scheduling-algorithms\until.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +82,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="scheduling-algorithms\FCFS\form\form-property.resx">
+      <DependentUpon>form-property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scheduling-algorithms\form-scheduling-algorithm.resx">
+      <DependentUpon>form-scheduling-algorithm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,7 +102,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="module\" />
+    <Folder Include="process\" />
+    <Folder Include="scheduling-algorithms\RR\form\" />
+    <Folder Include="scheduling-algorithms\RR\until\" />
+    <Folder Include="scheduling-algorithms\SJF\form\" />
+    <Folder Include="scheduling-algorithms\SJF\until\" />
+    <Folder Include="scheduling-algorithms\SRTN\form\" />
+    <Folder Include="scheduling-algorithms\SRTN\until\" />
+    <Folder Include="thread\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
