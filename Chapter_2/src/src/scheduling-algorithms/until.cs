@@ -41,5 +41,30 @@ namespace src.scheduling_algorithms
             });
             tx.Text = time;
         }
+
+        private static void add(gant gt,FlowLayoutPanel fl)
+        {
+            gt.Margin = new Padding(1, 1, 1, 1);
+            fl.Controls.Add(gt);
+        }
+
+        public static void renderGant(List<result_after_algorithm> rl,FlowLayoutPanel fl)
+        {
+            if(rl != null)
+            {
+                try
+                {
+                    var gat = new gant(rl[0], "first");
+                    add(gat, fl);
+                    for (int i = 1; i < rl.Count; i++)
+                    {
+                        var gt = new gant(rl[i], "moew moew ");
+                        add(gt, fl);
+                    }
+                }
+                catch { };
+            }
+
+        }
     }
 }

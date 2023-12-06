@@ -37,6 +37,8 @@
             this.time = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 256);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 235);
             this.dataGridView1.TabIndex = 0;
             // 
             // name
@@ -93,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(371, 512);
+            this.label2.Location = new System.Drawing.Point(427, 541);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 24);
             this.label2.TabIndex = 2;
@@ -103,7 +105,7 @@
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time.Location = new System.Drawing.Point(609, 512);
+            this.time.Location = new System.Drawing.Point(665, 541);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(54, 24);
             this.time.TabIndex = 3;
@@ -129,11 +131,31 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Thời gian chờ =  Thời gian lưu lại hệ thống - Thời gian thực hiện";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 440);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(756, 85);
+            this.flowLayoutPanel1.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 402);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Biểu đồ gant";
+            // 
             // form_property
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 562);
+            this.ClientSize = new System.Drawing.Size(769, 585);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.time);
@@ -160,5 +182,7 @@
         private System.Windows.Forms.Label time;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label5;
     }
 }

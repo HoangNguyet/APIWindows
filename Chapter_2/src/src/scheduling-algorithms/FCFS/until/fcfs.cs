@@ -35,7 +35,12 @@ namespace src.scheduling_algorithms.FCFS
                     //{waitTime}\r\n, Thời gian hoàn thành = {currentTime + process.BurstTime}\n, Thời gian lưu lại
                     //= {currentTime + process.BurstTime - process.ArrivalTime}\r\n");
                     
-                    result.Add(new result_after_algorithm {name = process.Name, thoi_gian_cho = waitTime.ToString(), thoi_gian_luu_lai = (currentTime + process.BurstTime - process.ArrivalTime).ToString() });
+                    result.Add(new result_after_algorithm {
+                        name = process.Name, thoi_gian_cho = waitTime.ToString(),
+                        thoi_gian_bat_dau = currentTime.ToString(),
+                        thoi_gian_hoan_thanh = (currentTime + process.BurstTime).ToString(),
+                        thoi_gian_luu_lai = (currentTime + process.BurstTime - process.ArrivalTime).ToString(),
+                    });
                     currentTime += process.BurstTime;
                 }
             }
