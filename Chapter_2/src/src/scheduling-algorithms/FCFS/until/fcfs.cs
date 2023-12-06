@@ -34,20 +34,21 @@ namespace src.scheduling_algorithms.FCFS
                     //lbResult.Items.Add($"{process.Name}: Thời gian bắt đầu = {currentTime}, Thời gian chờ =
                     //{waitTime}\r\n, Thời gian hoàn thành = {currentTime + process.BurstTime}\n, Thời gian lưu lại
                     //= {currentTime + process.BurstTime - process.ArrivalTime}\r\n");
-                    currentTime += process.BurstTime;
+                    
                     result.Add(new result_after_algorithm {name = process.Name, thoi_gian_cho = waitTime.ToString(), thoi_gian_luu_lai = (currentTime + process.BurstTime - process.ArrivalTime).ToString() });
+                    currentTime += process.BurstTime;
                 }
             }
             return result;
         }
         public static string thoi_gian_cho_trung_binh(List<result_after_algorithm> result)
         {
-            int time_= 0;
+            double time_= 0;
             result.ForEach(waitime =>
             {
                 time_ += Convert.ToInt32(waitime.thoi_gian_cho);
             });
-            time_ = time_/result.Count;
+            time_ = Math.Round(time_/result.Count,3);
             return time_.ToString();
         }
     }

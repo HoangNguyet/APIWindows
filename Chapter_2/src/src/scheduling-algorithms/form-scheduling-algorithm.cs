@@ -54,13 +54,11 @@ namespace src.scheduling_algorithms
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            var form = new form_scheduling_algorithm();
              using (var f = new form_property(processes))
              {
-                 this.Hide();
+
                  f.ShowDialog();
              };
-             form.ShowDialog();
         }
     }
 }

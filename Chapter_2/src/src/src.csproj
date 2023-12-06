@@ -69,6 +69,12 @@
     <Compile Include="scheduling-algorithms\form-scheduling-algorithm.Designer.cs">
       <DependentUpon>form-scheduling-algorithm.cs</DependentUpon>
     </Compile>
+    <Compile Include="scheduling-algorithms\gant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="scheduling-algorithms\gant.Designer.cs">
+      <DependentUpon>gant.cs</DependentUpon>
+    </Compile>
     <Compile Include="scheduling-algorithms\until.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="scheduling-algorithms\form-scheduling-algorithm.resx">
       <DependentUpon>form-scheduling-algorithm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scheduling-algorithms\gant.resx">
+      <DependentUpon>gant.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
