@@ -9,6 +9,7 @@ using src.scheduling_algorithms.FCFS.form;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using src.scheduling_algorithms.SJF;
 
 namespace src.scheduling_algorithms
 {
@@ -42,14 +43,14 @@ namespace src.scheduling_algorithms
             {
                 if(row.Selected)
                 {
-                    until.render(dataGridView1,processes,row.Index,"one");
+                    untils.render(dataGridView1,processes,row.Index,"one");
                 }
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            until.render(dataGridView1, processes, 96, "moew moew");
+            untils.render(dataGridView1, processes, 96, "moew moew");
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -59,6 +60,10 @@ namespace src.scheduling_algorithms
 
                  f.ShowDialog();
              };
+            using (var f = new SJF.form.property_sjf(processes))
+            {
+                f.ShowDialog();
+            }
         }
     }
 }

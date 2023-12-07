@@ -75,7 +75,14 @@
     <Compile Include="scheduling-algorithms\gant.Designer.cs">
       <DependentUpon>gant.cs</DependentUpon>
     </Compile>
-    <Compile Include="scheduling-algorithms\until.cs" />
+    <Compile Include="scheduling-algorithms\SJF\form\property-sjf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scheduling-algorithms\SJF\form\property-sjf.Designer.cs">
+      <DependentUpon>property-sjf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scheduling-algorithms\SJF\until\sjf.cs" />
+    <Compile Include="scheduling-algorithms\untils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +104,9 @@
     <EmbeddedResource Include="scheduling-algorithms\gant.resx">
       <DependentUpon>gant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="scheduling-algorithms\SJF\form\property-sjf.resx">
+      <DependentUpon>property-sjf.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,8 +124,6 @@
     <Folder Include="process\" />
     <Folder Include="scheduling-algorithms\RR\form\" />
     <Folder Include="scheduling-algorithms\RR\until\" />
-    <Folder Include="scheduling-algorithms\SJF\form\" />
-    <Folder Include="scheduling-algorithms\SJF\until\" />
     <Folder Include="scheduling-algorithms\SRTN\form\" />
     <Folder Include="scheduling-algorithms\SRTN\until\" />
     <Folder Include="thread\" />

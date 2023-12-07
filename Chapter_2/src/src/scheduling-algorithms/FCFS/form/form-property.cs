@@ -24,9 +24,9 @@ namespace src.scheduling_algorithms.FCFS.form
         {
             List<result_after_algorithm> rl = new List<result_after_algorithm>();
             rl = fcfs.algorithm(processs);
-            string time_ = fcfs.thoi_gian_cho_trung_binh(rl);
-            until.renderResult(dataGridView1,time, rl,time_);
-            until.renderGant(rl, flowLayoutPanel1);
+            string time_ = untils.thoi_gian_cho_trung_binh(rl);
+            untils.renderResult(dataGridView1,time, rl,time_);
+            untils.renderGant(rl, flowLayoutPanel1);
         }
     }
 }
