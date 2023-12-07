@@ -23,16 +23,6 @@ namespace src.scheduling_algorithms.SJF.until
             }
             return result;
         }
-        public static string thoi_gian_cho_trung_binh(List<result_after_algorithm> result)
-        {
-            double time_ = 0;
-            result.ForEach(waitime =>
-            {
-                time_ += Convert.ToInt32(waitime.thoi_gian_cho);
-            });
-            time_ = Math.Round(time_ / result.Count, 3);
-            return time_.ToString();
-        }
 
         public static int thoi_gian_den_ngan_nhat(List<Process> processes) 
         {

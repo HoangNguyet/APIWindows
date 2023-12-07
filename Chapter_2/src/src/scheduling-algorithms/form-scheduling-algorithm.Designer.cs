@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nameProcess = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.arivealTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.burstTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.boxArivealTime = new System.Windows.Forms.NumericUpDown();
             this.boxBurstTime = new System.Windows.Forms.NumericUpDown();
@@ -37,12 +40,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
-            this.nameProcess = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.arivealTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.burstTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtquantum = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxArivealTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxBurstTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtquantum)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,6 +63,30 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(620, 389);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // nameProcess
+            // 
+            this.nameProcess.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameProcess.HeaderText = "Tên";
+            this.nameProcess.MinimumWidth = 6;
+            this.nameProcess.Name = "nameProcess";
+            this.nameProcess.ReadOnly = true;
+            // 
+            // arivealTime
+            // 
+            this.arivealTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.arivealTime.HeaderText = "Thời gian đến";
+            this.arivealTime.MinimumWidth = 6;
+            this.arivealTime.Name = "arivealTime";
+            this.arivealTime.ReadOnly = true;
+            // 
+            // burstTime
+            // 
+            this.burstTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.burstTime.HeaderText = "Thời gian  thực thi";
+            this.burstTime.MinimumWidth = 6;
+            this.burstTime.Name = "burstTime";
+            this.burstTime.ReadOnly = true;
             // 
             // label1
             // 
@@ -100,7 +127,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(36, 223);
+            this.btnAdd.Location = new System.Drawing.Point(37, 335);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(190, 43);
             this.btnAdd.TabIndex = 5;
@@ -141,35 +168,31 @@
             this.btnRun.UseVisualStyleBackColor = true;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
-            // nameProcess
+            // txtquantum
             // 
-            this.nameProcess.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameProcess.HeaderText = "Tên";
-            this.nameProcess.MinimumWidth = 6;
-            this.nameProcess.Name = "nameProcess";
-            this.nameProcess.ReadOnly = true;
+            this.txtquantum.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquantum.Location = new System.Drawing.Point(35, 268);
+            this.txtquantum.Name = "txtquantum";
+            this.txtquantum.Size = new System.Drawing.Size(192, 32);
+            this.txtquantum.TabIndex = 11;
             // 
-            // arivealTime
+            // label3
             // 
-            this.arivealTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.arivealTime.HeaderText = "Thời gian đến";
-            this.arivealTime.MinimumWidth = 6;
-            this.arivealTime.Name = "arivealTime";
-            this.arivealTime.ReadOnly = true;
-            // 
-            // burstTime
-            // 
-            this.burstTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.burstTime.HeaderText = "Thời gian  thực thi";
-            this.burstTime.MinimumWidth = 6;
-            this.burstTime.Name = "burstTime";
-            this.burstTime.ReadOnly = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 233);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 24);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Quantum with RR";
             // 
             // form_scheduling_algorithm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 502);
+            this.Controls.Add(this.txtquantum);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -185,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxArivealTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxBurstTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtquantum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +228,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameProcess;
         private System.Windows.Forms.DataGridViewTextBoxColumn arivealTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn burstTime;
+        private System.Windows.Forms.NumericUpDown txtquantum;
+        private System.Windows.Forms.Label label3;
     }
 }

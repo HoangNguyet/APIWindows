@@ -81,14 +81,12 @@ namespace src.scheduling_algorithms
             var result = new List<result_after_algorithm>();
             int currentTime = 0; // Thời gian bắt đầu dùng CPU
                                  //lbResult.Text = "Kết quả lịch trình FCFS:\r\n";
-
             foreach (var process in processs)
             {
                 if (currentTime < process.ArrivalTime)
                 {
                     currentTime = process.ArrivalTime;
                 }
-                int waitTime = currentTime - process.ArrivalTime;
                 //int turnaroundTime = waitTime + process.BurstTime;
 
                 //totalTurnaroundTime += turnaroundTime;
@@ -96,10 +94,11 @@ namespace src.scheduling_algorithms
                 //{waitTime}\r\n, Thời gian hoàn thành = {currentTime + process.BurstTime}\n, Thời gian lưu lại
                 //= {currentTime + process.BurstTime - process.ArrivalTime}\r\n");
 
+
                 result.Add(new result_after_algorithm
                 {
                     name = process.Name,
-                    thoi_gian_cho = waitTime.ToString(),
+                    thoi_gian_cho = (currentTime + process.BurstTime - process.ArrivalTime - process.thoi_gian_con_lai_ban_dau).ToString(),
                     thoi_gian_bat_dau = currentTime.ToString(),
                     thoi_gian_hoan_thanh = (currentTime + process.BurstTime).ToString(),
                     thoi_gian_luu_lai = (currentTime + process.BurstTime - process.ArrivalTime).ToString(),

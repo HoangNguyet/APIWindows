@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using src.scheduling_algorithms.SJF;
+using src.scheduling_algorithms.RR.until;
 
 namespace src.scheduling_algorithms
 {
@@ -29,6 +30,7 @@ namespace src.scheduling_algorithms
                 Name = $"P{processes.Count + 1}",
                 ArrivalTime = Convert.ToInt32(boxArivealTime.Value),
                 BurstTime = Convert.ToInt32(boxBurstTime.Value),
+                thoi_gian_con_lai_ban_dau = Convert.ToInt32(boxBurstTime.Value),
             };
             processes.Add(process);
             dataGridView1.Rows.Add(process.Name, process.ArrivalTime, process.BurstTime);
@@ -61,6 +63,10 @@ namespace src.scheduling_algorithms
                  f.ShowDialog();
              };
             using (var f = new SJF.form.property_sjf(processes))
+            {
+                f.ShowDialog();
+            }
+            using (var f = new RR.form.property_rr(processes,Convert.ToInt32(txtquantum.Value)))
             {
                 f.ShowDialog();
             }

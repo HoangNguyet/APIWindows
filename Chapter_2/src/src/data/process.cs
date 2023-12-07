@@ -11,5 +11,6 @@ namespace src.data
         public string Name { get; set; }
         public int ArrivalTime { get; set; }
         public int BurstTime { get; set; }
+        public int thoi_gian_con_lai_ban_dau { get; set; }
     }
 }
