@@ -89,6 +89,13 @@
       <DependentUpon>property-sjf.cs</DependentUpon>
     </Compile>
     <Compile Include="scheduling-algorithms\SJF\until\sjf.cs" />
+    <Compile Include="scheduling-algorithms\SRTN\form\form-property-srtn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scheduling-algorithms\SRTN\form\form-property-srtn.Designer.cs">
+      <DependentUpon>form-property-srtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scheduling-algorithms\SRTN\until\srtn.cs" />
     <Compile Include="scheduling-algorithms\untils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,6 +124,9 @@
     <EmbeddedResource Include="scheduling-algorithms\SJF\form\property-sjf.resx">
       <DependentUpon>property-sjf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="scheduling-algorithms\SRTN\form\form-property-srtn.resx">
+      <DependentUpon>form-property-srtn.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,8 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="process\" />
-    <Folder Include="scheduling-algorithms\SRTN\form\" />
-    <Folder Include="scheduling-algorithms\SRTN\until\" />
     <Folder Include="thread\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

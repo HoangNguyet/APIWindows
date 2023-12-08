@@ -31,7 +31,7 @@ namespace src.scheduling_algorithms.RR.until
             while(hang_doi.Count > 0)
             {
                 var tmp = hang_doi[0];
-                if (tmp.BurstTime < quantum)
+                if (tmp.BurstTime <= quantum)
                 {
                     pro.Add(tmp);
                     hang_doi.RemoveAt(0);

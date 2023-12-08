@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using src.scheduling_algorithms.SJF;
 using src.scheduling_algorithms.RR.until;
+using src.scheduling_algorithms.SRTN.until;
 
 namespace src.scheduling_algorithms
 {
@@ -67,6 +68,10 @@ namespace src.scheduling_algorithms
                 f.ShowDialog();
             }
             using (var f = new RR.form.property_rr(processes,Convert.ToInt32(txtquantum.Value)))
+            {
+                f.ShowDialog();
+            }
+            using (var f = new SRTN.form.form_property_srtn(processes))
             {
                 f.ShowDialog();
             }
