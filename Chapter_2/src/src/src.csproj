@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7A40023F-6FFB-4168-88B6-2F8DC3ACF51D}</ProjectGuid>
+    <ProjectGuid>{A4326DF1-B659-4B0F-87F9-113F73AB1B73}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>src</RootNamespace>
     <AssemblyName>src</AssemblyName>
@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,59 +52,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\process.cs" />
-    <Compile Include="data\result_after_algorithm.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="data\ketQua.cs" />
+    <Compile Include="data\mau-sac.cs" />
+    <Compile Include="data\tienTrinh.cs" />
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="scheduling-algorithms\FCFS\form\form-property.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="scheduling-algorithms\FCFS\form\form-property.Designer.cs">
-      <DependentUpon>form-property.cs</DependentUpon>
-    </Compile>
-    <Compile Include="scheduling-algorithms\FCFS\until\fcfs.cs" />
-    <Compile Include="scheduling-algorithms\form-scheduling-algorithm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="scheduling-algorithms\form-scheduling-algorithm.Designer.cs">
-      <DependentUpon>form-scheduling-algorithm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="scheduling-algorithms\gant.cs">
+    <Compile Include="scheduling-algorithms\module\fcfs.cs" />
+    <Compile Include="scheduling-algorithms\module\rr.cs" />
+    <Compile Include="scheduling-algorithms\module\sjf.cs" />
+    <Compile Include="scheduling-algorithms\module\srtn.cs" />
+    <Compile Include="scheduling-algorithms\module\untils.cs" />
+    <Compile Include="scheduling-algorithms\scheduling-algorithm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="scheduling-algorithms\gant.Designer.cs">
+    <Compile Include="scheduling-algorithms\scheduling-algorithm.Designer.cs">
+      <DependentUpon>scheduling-algorithm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scheduling-algorithms\untils.cs" />
+    <Compile Include="scheduling-algorithms\user-controls\fcfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scheduling-algorithms\user-controls\fcfs.Designer.cs">
+      <DependentUpon>fcfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scheduling-algorithms\user-controls\gant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="scheduling-algorithms\user-controls\gant.Designer.cs">
       <DependentUpon>gant.cs</DependentUpon>
     </Compile>
-    <Compile Include="scheduling-algorithms\RR\form\property-rr.cs">
+    <Compile Include="scheduling-algorithms\user-controls\rr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="scheduling-algorithms\RR\form\property-rr.Designer.cs">
-      <DependentUpon>property-rr.cs</DependentUpon>
+    <Compile Include="scheduling-algorithms\user-controls\rr.Designer.cs">
+      <DependentUpon>rr.cs</DependentUpon>
     </Compile>
-    <Compile Include="scheduling-algorithms\RR\until\rr.cs" />
-    <Compile Include="scheduling-algorithms\SJF\form\property-sjf.cs">
+    <Compile Include="scheduling-algorithms\user-controls\sjf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="scheduling-algorithms\SJF\form\property-sjf.Designer.cs">
-      <DependentUpon>property-sjf.cs</DependentUpon>
+    <Compile Include="scheduling-algorithms\user-controls\sjf.Designer.cs">
+      <DependentUpon>sjf.cs</DependentUpon>
     </Compile>
-    <Compile Include="scheduling-algorithms\SJF\until\sjf.cs" />
-    <Compile Include="scheduling-algorithms\SRTN\form\form-property-srtn.cs">
+    <Compile Include="scheduling-algorithms\user-controls\srtn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="scheduling-algorithms\SRTN\form\form-property-srtn.Designer.cs">
-      <DependentUpon>form-property-srtn.cs</DependentUpon>
+    <Compile Include="scheduling-algorithms\user-controls\srtn.Designer.cs">
+      <DependentUpon>srtn.cs</DependentUpon>
     </Compile>
-    <Compile Include="scheduling-algorithms\SRTN\until\srtn.cs" />
-    <Compile Include="scheduling-algorithms\untils.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="scheduling-algorithms\user-controls\untils.cs" />
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,24 +118,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="scheduling-algorithms\FCFS\form\form-property.resx">
-      <DependentUpon>form-property.cs</DependentUpon>
+    <EmbeddedResource Include="scheduling-algorithms\scheduling-algorithm.resx">
+      <DependentUpon>scheduling-algorithm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="scheduling-algorithms\form-scheduling-algorithm.resx">
-      <DependentUpon>form-scheduling-algorithm.cs</DependentUpon>
+    <EmbeddedResource Include="scheduling-algorithms\user-controls\fcfs.resx">
+      <DependentUpon>fcfs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="scheduling-algorithms\gant.resx">
+    <EmbeddedResource Include="scheduling-algorithms\user-controls\gant.resx">
       <DependentUpon>gant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="scheduling-algorithms\RR\form\property-rr.resx">
-      <DependentUpon>property-rr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="scheduling-algorithms\SJF\form\property-sjf.resx">
-      <DependentUpon>property-sjf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="scheduling-algorithms\SRTN\form\form-property-srtn.resx">
-      <DependentUpon>form-property-srtn.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,10 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="process\" />
-    <Folder Include="thread\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

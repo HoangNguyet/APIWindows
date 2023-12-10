@@ -1,111 +1,72 @@
-﻿using src.data;
+﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace src.scheduling_algorithms
 {
-    public static class untils
+    public class untils
     {
-        public static void render(DataGridView dg,List<data.Process> processs,int i,string flags)
+        public List<data.tienTrinh> them_vao_danh_sach(Guna2DataGridView dg)
         {
-            dg.Rows.Clear();
-            switch (flags){
-                case "one":
-                    try
-                    {
-                        processs.RemoveAt(i);
-                    }
-                    catch { };
-                    break;
-                default:
-                    processs.Clear();
-                    break;
-            }
-            for(int index = 0; index < processs.Count; index++)
+            var m = new data.mau_sac();
+            var a = new List<data.tienTrinh>();
+            var mau_sac = new List<string>(m.mau_);
+            var random = new Random();
+            for (int i = 0; i < dg.Rows.Count - 1; i++)
             {
-                processs[index].Name = $"P{index + 1}";
-                dg.Rows.Add(processs[index].Name, processs[index].ArrivalTime, processs[index].BurstTime);
-            }
-        }
-        public static void renderResult(DataGridView dg,Label tx,List<result_after_algorithm> rl,string time)
-        {
-            rl.ForEach(r =>
-            {
-                dg.Rows.Add(r.name,r.thoi_gian_luu_lai,r.thoi_gian_cho);
-            });
-            tx.Text = time;
-        }
-
-        private static void add(gant gt,FlowLayoutPanel fl)
-        {
-            gt.Margin = new Padding(1, 1, 1, 1);
-            fl.Controls.Add(gt);
-        }
-
-        public static void renderGant(List<result_after_algorithm> rl,FlowLayoutPanel fl)
-        {
-            if(rl != null)
-            {
-                try
+                var index = random.Next(0, mau_sac.Count - 1);
+                a.Add(new data.tienTrinh()
                 {
-                    var gat = new gant(rl[0], "first");
-                    add(gat, fl);
-                    for (int i = 1; i < rl.Count; i++)
-                    {
-                        var gt = new gant(rl[i], "moew moew ");
-                        add(gt, fl);
-                    }
-                }
-                catch { };
-            }
-
-        }
-        public static string thoi_gian_cho_trung_binh(List<result_after_algorithm> result)
-        {
-            double time_ = 0;
-            result.ForEach(waitime =>
-            {
-                time_ += Convert.ToInt32(waitime.thoi_gian_cho);
-            });
-            time_ = Math.Round(time_ / result.Count, 3);
-            return time_.ToString();
-        }
-        public static List<result_after_algorithm> addTime(List<data.Process> processs)
-        {
-            var result = new List<result_after_algorithm>();
-            int currentTime = 0; // Thời gian bắt đầu dùng CPU
-                                 //lbResult.Text = "Kết quả lịch trình FCFS:\r\n";
-            foreach (var process in processs)
-            {
-                if (currentTime < process.ArrivalTime)
-                {
-                    currentTime = process.ArrivalTime;
-                }
-                //int turnaroundTime = waitTime + process.BurstTime;
-
-                //totalTurnaroundTime += turnaroundTime;
-                //lbResult.Items.Add($"{process.Name}: Thời gian bắt đầu = {currentTime}, Thời gian chờ =
-                //{waitTime}\r\n, Thời gian hoàn thành = {currentTime + process.BurstTime}\n, Thời gian lưu lại
-                //= {currentTime + process.BurstTime - process.ArrivalTime}\r\n");
-
-
-                result.Add(new result_after_algorithm
-                {
-                    name = process.Name,
-                    thoi_gian_cho = (currentTime + process.BurstTime - process.ArrivalTime - process.thoi_gian_con_lai_ban_dau).ToString(),
-                    thoi_gian_bat_dau = currentTime.ToString(),
-                    thoi_gian_hoan_thanh = (currentTime + process.BurstTime).ToString(),
-                    thoi_gian_luu_lai = (currentTime + process.BurstTime - process.ArrivalTime).ToString(),
+                    ten_tien_trinh = dg.Rows[i].Cells["Column1"].Value.ToString(),
+                    thoi_gian_den = Int32.Parse(dg.Rows[i].Cells["Column2"].Value.ToString()),
+                    thoi_gian_thuc_thi = Int32.Parse(dg.Rows[i].Cells["Column3"].Value.ToString()),
+                    thoi_gian_con_lai_ban_dau = Int32.Parse(dg.Rows[i].Cells["Column3"].Value.ToString()),
+                    mau_sac = mau_sac[index],
                 });
-                currentTime += process.BurstTime;
+                mau_sac.RemoveAt(index);
             }
-            return result;
+            return a;
+        }
+        public void hien_thi_ra_datagridview(Guna2DataGridView dg, string mode, int index)
+        {
+            if (mode == "xoa_het")
+            {
+                dg.Rows.Clear();
+                return;
+            }
+            else
+            {
+                if (dg.Rows.Count == 2)
+                {
+                    hien_thi_ra_datagridview(dg, "xoa_het", 99);
+                    return;
+                }
+                else
+                {
+                    dg.Rows.RemoveAt(index);
+                    var danh_sach_tien_trinh_hien_tai = them_vao_danh_sach(dg);
+                    dg.Rows.Clear();
+                    for (int i = 0; i < danh_sach_tien_trinh_hien_tai.Count; i++)
+                    {
+                        int n = i;
+                        dg.Rows.Add($"P{++n}", danh_sach_tien_trinh_hien_tai[i].thoi_gian_den, danh_sach_tien_trinh_hien_tai[i].thoi_gian_con_lai_ban_dau);
+                    }
+                    danh_sach_tien_trinh_hien_tai.Clear();
+                    return;
+                }
+
+            }
+        }
+        public void hien_thi_ket_qua(Form f)
+        {
+            using (f)
+            {
+                f.ShowDialog();
+            }
         }
     }
 }
