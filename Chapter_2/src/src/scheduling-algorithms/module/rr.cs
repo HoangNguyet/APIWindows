@@ -79,7 +79,7 @@ namespace src.scheduling_algorithms.module
                         thoi_gian_con_lai_ban_dau = a.thoi_gian_con_lai_ban_dau,
                         mau_sac = a.mau_sac,
                     });
-                }
+                }   
             }
             return untils.addTime(danh_sach_gant);
         }

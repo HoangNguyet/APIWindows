@@ -131,6 +131,9 @@
     <EmbeddedResource Include="scheduling-algorithms\user-controls\rr.resx">
       <DependentUpon>rr.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="scheduling-algorithms\user-controls\sjf.resx">
+      <DependentUpon>sjf.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

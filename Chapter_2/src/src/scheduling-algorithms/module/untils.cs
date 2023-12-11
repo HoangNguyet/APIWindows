@@ -86,6 +86,27 @@ namespace src.scheduling_algorithms.module
             dict.Add(tien_trinh, hang_doi);
             return dict;
         }
+
+        public int tien_trinh_thuc_thi_ngan_nhat(List<data.tienTrinh> hang_doi)
+        {
+            if(hang_doi.Count > 0)
+            {
+                int index = 0;
+                int min = hang_doi[index].thoi_gian_thuc_thi;
+                for(int i = 1; i < hang_doi.Count; i++)
+                {
+                    if (hang_doi[i].thoi_gian_thuc_thi < min)
+                    {
+                        index = i;
+                        min = hang_doi[i].thoi_gian_thuc_thi;
+                    }
+                }
+                return index;
+            }
+
+            return -1;
+        }
+
         public List<data.tienTrinh> sap_xep_khi_ngu(List<data.tienTrinh> tien_trinh)
         {
             var kq = new List<data.tienTrinh>();
