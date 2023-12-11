@@ -67,7 +67,7 @@
     <Compile Include="scheduling-algorithms\module\fcfs.cs" />
     <Compile Include="scheduling-algorithms\module\rr.cs" />
     <Compile Include="scheduling-algorithms\module\sjf.cs" />
-    <Compile Include="scheduling-algorithms\module\srtn.cs" />
+    <Compile Include="scheduling-algorithms\module\Srtn.cs" />
     <Compile Include="scheduling-algorithms\module\untils.cs" />
     <Compile Include="scheduling-algorithms\scheduling-algorithm.cs">
       <SubType>UserControl</SubType>
@@ -133,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="scheduling-algorithms\user-controls\sjf.resx">
       <DependentUpon>sjf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scheduling-algorithms\user-controls\srtn.resx">
+      <DependentUpon>srtn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -79,6 +79,7 @@ namespace src.scheduling_algorithms
                     untl.hien_thi_ket_qua(new sjf(untl.them_vao_danh_sach(data)));
                     break;
                 case "SRTN":
+                    untl.hien_thi_ket_qua(new srtn(untl.them_vao_danh_sach(data)));
                     break;
             }
         }
