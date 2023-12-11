@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using src.data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,8 +34,17 @@ namespace src.scheduling_algorithms.user_controls
                     else
                     {
                         int n = i;
-                        var a = new gant(ket_qua[i], Int32.Parse(ket_qua[--n].thoi_gian_hoan_thanh));
-                        a.Margin = new Padding(0, 0, 0, 0);
+                        var thoi_gian_hoan_thanh_ = Int32.Parse(ket_qua[--n].thoi_gian_hoan_thanh);
+                        var thoi_gian_bat_dauu_ = Int32.Parse(ket_qua[i].thoi_gian_bat_dau);
+                        var a = new gant(ket_qua[i], thoi_gian_hoan_thanh_);
+                        if (thoi_gian_bat_dauu_ > thoi_gian_hoan_thanh_)
+                        {
+                            a.Margin = new Padding((thoi_gian_bat_dauu_ - thoi_gian_hoan_thanh_)*70, 0, 0, 0);
+                        }
+                        else
+                        {
+                            a.Margin = new Padding(0, 0, 0, 0);
+                        }
                         panel.Controls.Add(a);
                     }
                 }

@@ -125,37 +125,23 @@ namespace src.scheduling_algorithms.module
             int i = 0;
             while(i< ket_qua.Count)
             {
-                int j = i + 1;
+                int j = i;
+                j++;
                 while(j< ket_qua.Count && ket_qua[i].ten_tien_trinh == ket_qua[j].ten_tien_trinh)
                 {
                     j++;
                 }
                 int n = j;
                 n--;
-                if (i == 0)
+                ket_qua_sau_khi_gop.Add(new data.ketQua()
                 {
-                    ket_qua_sau_khi_gop.Add(new data.ketQua()
-                    {
-                        ten_tien_trinh = ket_qua[i].ten_tien_trinh,
-                        mau_sac = ket_qua[i].mau_sac,
-                        thoi_gian_cho = ket_qua[n].thoi_gian_cho,
-                        thoi_gian_hoan_thanh = ket_qua[n].thoi_gian_hoan_thanh,
-                        thoi_gian_bat_dau = ket_qua[i].thoi_gian_bat_dau,
-                        thoi_gian_luu_lai = ket_qua[n].thoi_gian_luu_lai,
-                    });
-                }
-                else
-                {
-                    ket_qua_sau_khi_gop.Add(new data.ketQua()
-                    {
-                        ten_tien_trinh = ket_qua[i].ten_tien_trinh,
-                        mau_sac = ket_qua[i].mau_sac,
-                        thoi_gian_cho = ket_qua[n].thoi_gian_cho,
-                        thoi_gian_hoan_thanh = ket_qua[n].thoi_gian_hoan_thanh,
-                        thoi_gian_bat_dau = ket_qua[n].thoi_gian_bat_dau,
-                        thoi_gian_luu_lai = ket_qua[n].thoi_gian_luu_lai,
-                    });
-                }
+                    ten_tien_trinh = ket_qua[i].ten_tien_trinh,
+                    mau_sac = ket_qua[i].mau_sac,
+                    thoi_gian_cho = ket_qua[n].thoi_gian_cho,
+                    thoi_gian_hoan_thanh = ket_qua[n].thoi_gian_hoan_thanh,
+                    thoi_gian_bat_dau = ket_qua[i].thoi_gian_bat_dau,
+                    thoi_gian_luu_lai = ket_qua[n].thoi_gian_luu_lai,
+                });
                 i = j;
             }
             return ket_qua_sau_khi_gop;

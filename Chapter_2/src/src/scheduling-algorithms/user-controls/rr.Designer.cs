@@ -28,79 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.result = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bieuDoGant = new System.Windows.Forms.FlowLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.tg_cho_tb = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.quant = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.result)).BeginInit();
             this.SuspendLayout();
             // 
             // result
             // 
             this.result.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(7);
-            this.result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(7);
+            this.result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.result.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.result.ColumnHeadersHeight = 50;
             this.result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.result.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.result.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.result.DefaultCellStyle = dataGridViewCellStyle19;
             this.result.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.result.Location = new System.Drawing.Point(-2, 148);
+            this.result.Location = new System.Drawing.Point(2, 151);
             this.result.Name = "result";
             this.result.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.result.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.result.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.result.RowHeadersVisible = false;
             this.result.RowHeadersWidth = 50;
             this.result.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.result.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(10);
             this.result.RowTemplate.Height = 50;
             this.result.ShowEditingIcon = false;
-            this.result.Size = new System.Drawing.Size(1168, 407);
-            this.result.TabIndex = 22;
+            this.result.Size = new System.Drawing.Size(1168, 372);
+            this.result.TabIndex = 13;
             this.result.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.result.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.result.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -147,14 +148,44 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(530, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(540, 24);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Thời gian chờ = Thời gian lưu lại hệ thông - Thời gian thực thi";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(528, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(585, 24);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Thời gian lưu lại hệ thống = Thời gian hoành thành - Thời gian đến";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(526, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(310, 34);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Các công thức liên quan";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 40);
+            this.label1.Location = new System.Drawing.Point(20, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 39);
-            this.label1.TabIndex = 18;
+            this.label1.TabIndex = 9;
             this.label1.Text = "Kết quả với RR";
             // 
             // bieuDoGant
@@ -163,10 +194,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bieuDoGant.AutoScroll = true;
             this.bieuDoGant.AutoScrollMargin = new System.Drawing.Size(0, 20);
-            this.bieuDoGant.Location = new System.Drawing.Point(-2, 609);
+            this.bieuDoGant.Location = new System.Drawing.Point(2, 578);
             this.bieuDoGant.Name = "bieuDoGant";
             this.bieuDoGant.Size = new System.Drawing.Size(1168, 127);
-            this.bieuDoGant.TabIndex = 26;
+            this.bieuDoGant.TabIndex = 17;
             this.bieuDoGant.WrapContents = false;
             // 
             // label7
@@ -174,10 +205,10 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 568);
+            this.label7.Location = new System.Drawing.Point(12, 537);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(173, 34);
-            this.label7.TabIndex = 25;
+            this.label7.TabIndex = 16;
             this.label7.Text = "Biểu đồ Gant";
             // 
             // tg_cho_tb
@@ -185,10 +216,10 @@
             this.tg_cho_tb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tg_cho_tb.AutoSize = true;
             this.tg_cho_tb.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tg_cho_tb.Location = new System.Drawing.Point(1054, 757);
+            this.tg_cho_tb.Location = new System.Drawing.Point(1058, 726);
             this.tg_cho_tb.Name = "tg_cho_tb";
             this.tg_cho_tb.Size = new System.Drawing.Size(77, 34);
-            this.tg_cho_tb.TabIndex = 24;
+            this.tg_cho_tb.TabIndex = 15;
             this.tg_cho_tb.Text = "Time";
             // 
             // label5
@@ -196,52 +227,33 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(739, 757);
+            this.label5.Location = new System.Drawing.Point(743, 726);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(309, 34);
-            this.label5.TabIndex = 23;
+            this.label5.TabIndex = 14;
             this.label5.Text = "Thời gian chờ trung bình";
             // 
-            // label6
+            // quant
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(501, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(540, 24);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Thời gian chờ = Thời gian lưu lại hệ thông - Thời gian thực thi";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(499, 74);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(585, 24);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Thời gian lưu lại hệ thống = Thời gian hoành thành - Thời gian đến";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(497, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(310, 34);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Các công thức liên quan";
+            this.quant.AutoSize = true;
+            this.quant.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quant.Location = new System.Drawing.Point(21, 94);
+            this.quant.Name = "quant";
+            this.quant.Size = new System.Drawing.Size(146, 34);
+            this.quant.TabIndex = 18;
+            this.quant.Text = "quantum:0";
             // 
             // rr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1164, 825);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(1173, 804);
+            this.Controls.Add(this.quant);
             this.Controls.Add(this.result);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bieuDoGant);
             this.Controls.Add(this.label7);
@@ -251,7 +263,7 @@
             this.Name = "rr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "rr";
-            this.Load += new System.EventHandler(this.rr_Load);
+            this.Load += new System.EventHandler(this.rr_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.result)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,13 +276,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel bieuDoGant;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label tg_cho_tb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label quant;
     }
 }

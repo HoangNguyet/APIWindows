@@ -14,22 +14,24 @@ namespace src.scheduling_algorithms.user_controls
     {
         private List<data.tienTrinh> tien_trinh;
         private int quantum;
-        public rr(List<data.tienTrinh> tien_trinh,int quantum)
+        public rr(List<data.tienTrinh> tien_trinh, int quantum)
         {
             InitializeComponent();
-            this.tien_trinh = tien_trinh;   
+            this.tien_trinh = tien_trinh;
             this.quantum = quantum;
         }
 
-        private void rr_Load(object sender, EventArgs e)
+        private void rr_Load_1(object sender, EventArgs e)
         {
             var _rr = new module.rr();
             var until = new untils();
             var temp = new List<data.ketQua>();
             var untlil_module = new module.untils();
-            var ket_qua = _rr.ket_qua_thuat_toan(tien_trinh,quantum);
-            until.hien_thi_ket_qua(result, untlil_module.ket_qua_sau_khi_loc(ket_qua), tg_cho_tb, 
+            var ket_qua = _rr.ket_qua_thuat_toan(tien_trinh, quantum);
+            until.hien_thi_ket_qua(result, untlil_module.ket_qua_sau_khi_loc(ket_qua), tg_cho_tb,
                 untlil_module.thoi_gian_cho_trung_binh(untlil_module.ket_qua_sau_khi_loc(ket_qua)));
+
+            quant.Text = $"quantum = {quantum.ToString()}";
             until.hien_thi_gant(bieuDoGant, untlil_module.gop_ket_qua_lai(ket_qua));
         }
     }
