@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace src.scheduling_algorithms
 {
-    internal class srtn
+    public class srtn
     {
+
     }
 }

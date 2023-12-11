@@ -76,7 +76,7 @@
             this.timeEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.timeEnd.AutoSize = true;
             this.timeEnd.Font = new System.Drawing.Font("Roboto", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeEnd.Location = new System.Drawing.Point(34, 67);
+            this.timeEnd.Location = new System.Drawing.Point(32, 67);
             this.timeEnd.Name = "timeEnd";
             this.timeEnd.Size = new System.Drawing.Size(30, 34);
             this.timeEnd.TabIndex = 2;

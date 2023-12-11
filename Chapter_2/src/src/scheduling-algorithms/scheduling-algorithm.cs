@@ -8,6 +8,7 @@ using src.scheduling_algorithms.user_controls;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 using System.Windows.Forms;
 
 namespace src.scheduling_algorithms
@@ -59,6 +60,20 @@ namespace src.scheduling_algorithms
                     untl.hien_thi_ket_qua(new fcfs(untl.them_vao_danh_sach(data)));
                     break;
                 case "RR":
+                    string quantum = Interaction.InputBox("Quatum");
+                    try
+                    {
+                        int q = Int32.Parse(quantum);
+                        if (q <= 0)
+                        {
+                            break;
+                        }
+                        untl.hien_thi_ket_qua(new rr(untl.them_vao_danh_sach(data),q));
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Vui lòng nhập quantum là một số nguyên dương vào trước khi thực hiện thuật toán RR","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
                     break;
                 case "SJF":
                     break;

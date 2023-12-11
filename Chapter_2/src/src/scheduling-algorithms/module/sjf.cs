@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace src.scheduling_algorithms.module
 {
-    internal class sjf
+    public class sjf
     {
+
     }
 }

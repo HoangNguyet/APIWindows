@@ -10,15 +10,15 @@ namespace src.scheduling_algorithms.user_controls
 {
     public class untils
     {
-        public void hien_thi_ket_qua(Guna2DataGridView dg,List<data.ketQua> ket_qua,Label lb,string thoi_gian_cho_tb)
+        public void hien_thi_ket_qua(Guna2DataGridView dg, List<data.ketQua> ket_qua, Label lb, string thoi_gian_cho_tb)
         {
             ket_qua.ForEach(kq =>
             {
-                dg.Rows.Add(kq.ten_tien_trinh,kq.thoi_gian_luu_lai,kq.thoi_gian_cho);
+                dg.Rows.Add(kq.ten_tien_trinh, kq.thoi_gian_luu_lai, kq.thoi_gian_cho);
             });
             lb.Text = thoi_gian_cho_tb;
         }
-        public void hien_thi_gant(FlowLayoutPanel panel,List<data.ketQua> ket_qua)
+        public void hien_thi_gant(FlowLayoutPanel panel, List<data.ketQua> ket_qua)
         {
             if (ket_qua.Count() > 0)
             {
@@ -27,7 +27,7 @@ namespace src.scheduling_algorithms.user_controls
                     if (i == 0)
                     {
                         var a = new gant(ket_qua[0], -1);
-                        a.Margin = new Padding(0,0,0,0);
+                        a.Margin = new Padding(0, 0, 0, 0);
                         panel.Controls.Add(a);
                     }
                     else
@@ -41,4 +41,5 @@ namespace src.scheduling_algorithms.user_controls
             }
         }
     }
+
 }
