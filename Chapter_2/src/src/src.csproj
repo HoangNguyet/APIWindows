@@ -119,18 +119,29 @@
     <Compile Include="thread\thread-controls.Designer.cs">
       <DependentUpon>thread-controls.cs</DependentUpon>
     </Compile>
-    <Compile Include="thread\user-controls\client.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="thread\user-controls\send-message.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="thread\user-controls\client.Designer.cs">
-      <DependentUpon>client.cs</DependentUpon>
+    <Compile Include="thread\user-controls\send-message.Designer.cs">
+      <DependentUpon>send-message.cs</DependentUpon>
     </Compile>
-    <Compile Include="thread\user-controls\h.cs" />
     <Compile Include="thread\user-controls\server.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="thread\user-controls\server.Designer.cs">
       <DependentUpon>server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thread\user-controls\user-controls2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="thread\user-controls\user-controls2.Designer.cs">
+      <DependentUpon>user-controls2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thread\user-controls\UserClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="thread\user-controls\UserClient.Designer.cs">
+      <DependentUpon>UserClient.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -168,11 +179,17 @@
     <EmbeddedResource Include="thread\thread-controls.resx">
       <DependentUpon>thread-controls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="thread\user-controls\client.resx">
-      <DependentUpon>client.cs</DependentUpon>
+    <EmbeddedResource Include="thread\user-controls\send-message.resx">
+      <DependentUpon>send-message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="thread\user-controls\server.resx">
       <DependentUpon>server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thread\user-controls\user-controls2.resx">
+      <DependentUpon>user-controls2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thread\user-controls\UserClient.resx">
+      <DependentUpon>UserClient.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -187,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\img-interface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

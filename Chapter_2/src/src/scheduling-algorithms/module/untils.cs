@@ -95,7 +95,7 @@ namespace src.scheduling_algorithms.module
                 int min = hang_doi[index].thoi_gian_thuc_thi;
                 for(int i = 1; i < hang_doi.Count; i++)
                 {
-                    if (hang_doi[i].thoi_gian_thuc_thi < min)
+                    if (hang_doi[i].thoi_gian_thuc_thi <= min)
                     {
                         index = i;
                         min = hang_doi[i].thoi_gian_thuc_thi;

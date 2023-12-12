@@ -21,21 +21,43 @@ namespace src.thread
 
         private void thread_controls_Load(object sender, EventArgs e)
         {
-            var server1 = new server();
-            server1.BackColor = System.Drawing.Color.White;
-            server1.Location = new System.Drawing.Point(4, 0);
-            server1.Name = "server1";
-            server1.Size = new System.Drawing.Size(780, 741);
-            server1.TabIndex = 0;
-            this.Controls.Add(server1);
-            Thread.Sleep(1000);
-            var client1 = new client();
-            client1.Location = new System.Drawing.Point(800, 20);
-            client1.Name = "client1";
-            client1.Size = new System.Drawing.Size(946, 688);
-            client1.TabIndex = 1;
-            this.Controls.Add(client1);
-            
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            int quatity = Convert.ToInt32(guna2NumericUpDown1.Value);
+            Thread t = new Thread(() =>
+            {
+                var f = new server();
+                f.ShowDialog();
+            });
+            t.Start();
+            Thread.Sleep(500);
+            for (int i = 0; i < quatity; i++)
+            {
+                Thread k = new Thread(() =>
+                {
+                    var client = new send_message();
+                    client.ShowDialog();
+                });
+                k.Start();
+            };
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

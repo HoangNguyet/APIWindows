@@ -10,16 +10,23 @@ using System.Windows.Forms;
 
 namespace src.thread.user_controls
 {
-    public partial class server : Form
+    public partial class send_message : Form
     {
-        public server()
+        private string ten_ = "Client1";
+        public send_message()
         {
             InitializeComponent();
         }
 
+
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void send_message_Load(object sender, EventArgs e)
+        {
+            ten.Text = ten_;
         }
     }
 }
