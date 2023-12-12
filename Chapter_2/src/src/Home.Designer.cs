@@ -35,7 +35,9 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.thread_controls1 = new src.thread.thread_controls();
             this.scheduling_algorithm1 = new src.scheduling_algorithms.scheduling_algorithm();
+            this.process_controls1 = new src.process.process_controls();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -134,7 +136,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.thread_controls1);
             this.guna2Panel2.Controls.Add(this.scheduling_algorithm1);
+            this.guna2Panel2.Controls.Add(this.process_controls1);
             this.guna2Panel2.Location = new System.Drawing.Point(-8, 147);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1485, 585);
@@ -166,6 +170,15 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Chương 2: Tiến trình và luồng";
             // 
+            // thread_controls1
+            // 
+            this.thread_controls1.BackColor = System.Drawing.Color.White;
+            this.thread_controls1.Location = new System.Drawing.Point(-6, -3);
+            this.thread_controls1.Name = "thread_controls1";
+            this.thread_controls1.Size = new System.Drawing.Size(1482, 785);
+            this.thread_controls1.TabIndex = 1;
+            this.thread_controls1.Load += new System.EventHandler(this.thread_controls1_Load);
+            // 
             // scheduling_algorithm1
             // 
             this.scheduling_algorithm1.BackColor = System.Drawing.Color.White;
@@ -173,6 +186,14 @@
             this.scheduling_algorithm1.Name = "scheduling_algorithm1";
             this.scheduling_algorithm1.Size = new System.Drawing.Size(1422, 729);
             this.scheduling_algorithm1.TabIndex = 0;
+            // 
+            // process_controls1
+            // 
+            this.process_controls1.BackColor = System.Drawing.Color.White;
+            this.process_controls1.Location = new System.Drawing.Point(8, -3);
+            this.process_controls1.Name = "process_controls1";
+            this.process_controls1.Size = new System.Drawing.Size(1422, 729);
+            this.process_controls1.TabIndex = 2;
             // 
             // Home
             // 
@@ -207,6 +228,8 @@
         private scheduling_algorithms.scheduling_algorithm scheduling_algorithm1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private thread.thread_controls thread_controls1;
+        private process.process_controls process_controls1;
     }
 }
 
