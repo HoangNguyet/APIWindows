@@ -28,9 +28,12 @@ namespace src.thread.user_controls
 
         private void ListenForClients()
         {
+            var ran = new Random();
+            var b =  ran.Next(1,254);
             try
             {
-                server_ = new TcpListener(IPAddress.Parse("127.0.0.1"), 8080);
+                server_ = new TcpListener(IPAddress.Parse($"127.0.0.{b}"), 8080);
+                h.a = b;
                 server_.Start();
 
                 while (true)

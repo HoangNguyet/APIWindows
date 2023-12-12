@@ -125,6 +125,7 @@
     <Compile Include="thread\user-controls\client.Designer.cs">
       <DependentUpon>client.cs</DependentUpon>
     </Compile>
+    <Compile Include="thread\user-controls\h.cs" />
     <Compile Include="thread\user-controls\server.cs">
       <SubType>UserControl</SubType>
     </Compile>

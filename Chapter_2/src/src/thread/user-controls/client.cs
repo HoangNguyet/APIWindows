@@ -29,7 +29,7 @@ namespace src.thread.user_controls
         {
             try
             {
-                client_ = new TcpClient("127.0.0.1", 8080);
+                client_ = new TcpClient($"127.0.0.{h.a}", 8080);
                 stream = client_.GetStream();
 
                 receiveThread = new Thread(new ThreadStart(ReceiveData));
