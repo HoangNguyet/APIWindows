@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace src.scheduling_algorithms.module
 {
@@ -10,6 +11,7 @@ namespace src.scheduling_algorithms.module
     {
         public List<data.ketQua> ket_qua_thuat_toan(List<data.tienTrinh> tien_trinh)
         {
+            bool flags = false;
             var untils = new module.untils();
             var hang_doi = new List<data.tienTrinh>();
             var danh_sach_gant = new List<data.tienTrinh>();
@@ -22,7 +24,7 @@ namespace src.scheduling_algorithms.module
             while (hang_doi.Count > 0)
             {
                 //Tim tien trinh co thoi gian thuc thi ngan nhat trong hang doi
-                int index = untils.tien_trinh_thuc_thi_ngan_nhat(hang_doi);
+                int index = untils.tien_trinh_thuc_thi_ngan_nhat(hang_doi,flags:flags);
                 //Lay tien trinh nay ra va thuc thi 1 don vi thoi gian
                 var a = hang_doi[index];
                 thoi_gian_bat_dau += 1;
@@ -51,6 +53,7 @@ namespace src.scheduling_algorithms.module
                         tien_trinh_cp = kq.ElementAt(0).Key;
                         hang_doi = kq.ElementAt(0).Value;
                     }
+                    flags = false;
                 }
                 else
                 {
@@ -72,6 +75,7 @@ namespace src.scheduling_algorithms.module
                         thoi_gian_con_lai_ban_dau = a.thoi_gian_con_lai_ban_dau,
                         mau_sac = a.mau_sac,
                     });
+                    flags = true;
                 }
             }
             return untils.addTime(danh_sach_gant);

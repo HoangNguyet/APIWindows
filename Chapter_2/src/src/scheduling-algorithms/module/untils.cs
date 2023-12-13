@@ -87,7 +87,7 @@ namespace src.scheduling_algorithms.module
             return dict;
         }
 
-        public int tien_trinh_thuc_thi_ngan_nhat(List<data.tienTrinh> hang_doi)
+        public int tien_trinh_thuc_thi_ngan_nhat(List<data.tienTrinh> hang_doi,bool flags=false)
         {
             if(hang_doi.Count > 0)
             {
@@ -95,10 +95,18 @@ namespace src.scheduling_algorithms.module
                 int min = hang_doi[index].thoi_gian_thuc_thi;
                 for(int i = 1; i < hang_doi.Count; i++)
                 {
-                    if (hang_doi[i].thoi_gian_thuc_thi <= min)
+                    if (hang_doi[i].thoi_gian_thuc_thi < min)
                     {
                         index = i;
                         min = hang_doi[i].thoi_gian_thuc_thi;
+                    }
+                }
+                if (flags)
+                {
+                    if (min == hang_doi[hang_doi.Count-1].thoi_gian_thuc_thi)
+                    {
+                        min = hang_doi[hang_doi.Count - 1].thoi_gian_thuc_thi;
+                        index = hang_doi.Count - 1;
                     }
                 }
                 return index;
