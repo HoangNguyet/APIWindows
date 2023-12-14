@@ -40,9 +40,8 @@
             this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(43, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 24);
+            this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 6;
-            this.label1.Text = "label1aaaaaaaaaadsadsads";
             // 
             // guna2CirclePictureBox1
             // 

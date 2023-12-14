@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,60 +13,77 @@ namespace src.thread.user_controls
 {
     public partial class user_controls2 : UserControl
     {
-        string imagPath = $@"C:\Users\Le Khac Ninh 2\Desktop\APIWindows\Chapter_2\src\src\data\img-interface\user9.png";
-        string message = "hi nice too meet you hi ha haha ";
-        private string xac_min = "not heare";
-        public user_controls2()
+        string imagPath;
+        string message;
+        private string xac_min;
+        public user_controls2(string imagePath,string message,string xac_minh)
         {
             InitializeComponent();
+            this.message = message;
+            this.imagPath = imagePath;
+            this.xac_min = xac_minh;
         }
 
 
+
+        [Category("set Name")]
+        private String setMesage
+        {
+            get { return message; }set { message = value; }
+        }
         private void user_controls2_Load_1(object sender, EventArgs e)
         {
-            if(xac_min == "not here")
+            if (xac_min == "not here")
             {
                 guna2CirclePictureBox1.Location = new System.Drawing.Point(10, 11);
                 label1.Location = new System.Drawing.Point(85, 22);
             }
             guna2CirclePictureBox1.Image = Image.FromFile(imagPath);
-            int i = 0;
-            int j = 0;
-            if (message.Length >= 30)
+            string mss = message;
+            label1.Text = mss;
+            if (label1.Size.Width >= 215)
             {
+                label1.Text = "";
                 StringBuilder sb = new StringBuilder();
-                while (true)
+                StringBuilder sb2 = new StringBuilder();
+                foreach (var a in mss)
                 {
-                    try
+                    if (label1.Size.Width <= 215)
                     {
-                        sb.Append(message.Substring(i, 30));
-                        sb.Append("\n");
-                        i = i + 29;
-                        j++;
+                        sb2.Append(a);
                     }
-                    catch { break; }
-                    sb.Append(message.Substring(i));
+                    else
+                    {
+                        sb2.Append("\n");
+                        sb2.Append(a);
+                        sb.Append(sb2.ToString());
+                        sb2 = new StringBuilder();
+                        label1.Text = "";
+                    }
+                    label1.Text = sb2.ToString();
                 }
                 label1.Text = sb.ToString();
             }
-            else
+            else if(xac_min != "not here")
             {
-                StringBuilder sb = new StringBuilder();
-                sb.Append(message);
-               for (int k = message.Length; i <=30; i++)
+                while (label1.Size.Width <= 215)
                 {
-                    sb.Append(" ");
+                    string name = " " + mss;
+                    mss = name;
+                    label1.Text = mss;
                 }
-               label1.Text += sb.ToString();
+            }else if(xac_min  == "not here")
+            {
+                label1.Text = mss;
             }
-            if (j <= 1)
+            /*if (j <= 1)
             {
 
             }
             else
             {
-                this.Size = new System.Drawing.Size(350, 94 + (j - 1) * 28);
-            }
+                this.Size = new System.Drawing.Size(350, 94 + (j - 1) * 24);
+            }*/
         }
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)

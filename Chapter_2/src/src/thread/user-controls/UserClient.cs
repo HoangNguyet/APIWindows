@@ -12,12 +12,23 @@ namespace src.thread.user_controls
 {
     public partial class UserClient : UserControl
     {
-        string imagPath = $@"C:\Users\Le Khac Ninh 2\Desktop\APIWindows\Chapter_2\src\src\data\img-interface\user9.png";
-        string message = "hi nice too meet you";
-        private string client_name = "Client1";
-        public UserClient()
+        public event EventHandler click__;
+        string imagPath =@"..\..\data\img-interface\user8.png";
+        string message="hi";
+        private string client_name="a";
+        protected virtual void click_user(EventArgs e)
+        {
+            if (click__ != null)
+            {
+                click__.Invoke(this, e);
+            }
+        }
+        public UserClient(string imagePath,string messgae,string client_name)
         {
             InitializeComponent();
+            this.imagPath = imagePath;
+            this.message = messgae;
+            this.client_name = client_name;
         }
 
         private void UserClient_Load(object sender, EventArgs e)
@@ -37,27 +48,24 @@ namespace src.thread.user_controls
             }
         }
 
-        private void UserClient_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            using(var f = new send_message())
-            {
-                f.ShowDialog();
-            }
+            click_user(e);
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            UserClient_Click(sender, e);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            UserClient_Click(sender, e);
+            click_user(e);
         }
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            UserClient_Click(sender, e);
+            click_user(e);
+        }
+
+        private void UserClient_Click(object sender, EventArgs e)
+        {
+            click_user(e);
         }
     }
 }

@@ -31,21 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(send_message));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.ten = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.txtMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.user_controls21 = new src.thread.user_controls.user_controls2();
+            this.flowMessage = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 20;
             this.guna2GradientPanel1.Controls.Add(this.ten);
-            this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2GradientPanel1.Controls.Add(this.avatar);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(9, 7);
@@ -65,46 +63,46 @@
             this.ten.TabIndex = 1;
             this.ten.Text = "Client1";
             // 
-            // guna2CirclePictureBox1
+            // avatar
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(10, 10);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(136, 130);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.avatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.avatar.Image = ((System.Drawing.Image)(resources.GetObject("avatar.Image")));
+            this.avatar.ImageRotate = 0F;
+            this.avatar.Location = new System.Drawing.Point(10, 10);
+            this.avatar.Name = "avatar";
+            this.avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.avatar.Size = new System.Drawing.Size(136, 130);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatar.TabIndex = 0;
+            this.avatar.TabStop = false;
             // 
-            // guna2TextBox1
+            // txtMessage
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.BorderThickness = 4;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconRightOffset = new System.Drawing.Point(20, 0);
-            this.guna2TextBox1.IconRightSize = new System.Drawing.Size(50, 50);
-            this.guna2TextBox1.Location = new System.Drawing.Point(19, 631);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.PlaceholderText = "Type message here";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(462, 75);
-            this.guna2TextBox1.TabIndex = 1;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(20, 0);
+            this.txtMessage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(144)))), ((int)(((byte)(226)))));
+            this.txtMessage.BorderRadius = 15;
+            this.txtMessage.BorderThickness = 4;
+            this.txtMessage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMessage.DefaultText = "";
+            this.txtMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic);
+            this.txtMessage.ForeColor = System.Drawing.Color.Black;
+            this.txtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.IconRightOffset = new System.Drawing.Point(20, 0);
+            this.txtMessage.IconRightSize = new System.Drawing.Size(50, 50);
+            this.txtMessage.Location = new System.Drawing.Point(19, 631);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PasswordChar = '\0';
+            this.txtMessage.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtMessage.PlaceholderText = "Type message here";
+            this.txtMessage.SelectedText = "";
+            this.txtMessage.Size = new System.Drawing.Size(462, 75);
+            this.txtMessage.TabIndex = 1;
+            this.txtMessage.TextOffset = new System.Drawing.Point(20, 0);
             // 
             // guna2ImageButton1
             // 
@@ -120,22 +118,15 @@
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(50, 50);
             this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
             this.guna2ImageButton1.TabIndex = 2;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.guna2ImageButton1.Click += new System.EventHandler(this.send_Click);
             // 
-            // flowLayoutPanel1
+            // flowMessage
             // 
-            this.flowLayoutPanel1.Controls.Add(this.user_controls21);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 169);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(488, 441);
-            this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // user_controls21
-            // 
-            this.user_controls21.Location = new System.Drawing.Point(3, 3);
-            this.user_controls21.Name = "user_controls21";
-            this.user_controls21.Size = new System.Drawing.Size(450, 95);
-            this.user_controls21.TabIndex = 0;
+            this.flowMessage.AutoScroll = true;
+            this.flowMessage.Location = new System.Drawing.Point(9, 169);
+            this.flowMessage.Name = "flowMessage";
+            this.flowMessage.Size = new System.Drawing.Size(488, 441);
+            this.flowMessage.TabIndex = 3;
             // 
             // send_message
             // 
@@ -143,18 +134,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(504, 719);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowMessage);
             this.Controls.Add(this.guna2ImageButton1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "send_message";
             this.Text = "send_message";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.send_message_FormClosed);
             this.Load += new System.EventHandler(this.send_message_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,10 +154,9 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label ten;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox avatar;
+        private Guna.UI2.WinForms.Guna2TextBox txtMessage;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private user_controls2 user_controls21;
+        private System.Windows.Forms.FlowLayoutPanel flowMessage;
     }
 }

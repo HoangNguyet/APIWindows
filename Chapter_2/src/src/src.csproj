@@ -125,12 +125,6 @@
     <Compile Include="thread\user-controls\send-message.Designer.cs">
       <DependentUpon>send-message.cs</DependentUpon>
     </Compile>
-    <Compile Include="thread\user-controls\server.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="thread\user-controls\server.Designer.cs">
-      <DependentUpon>server.cs</DependentUpon>
-    </Compile>
     <Compile Include="thread\user-controls\user-controls2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,9 +176,6 @@
     <EmbeddedResource Include="thread\user-controls\send-message.resx">
       <DependentUpon>send-message.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="thread\user-controls\server.resx">
-      <DependentUpon>server.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="thread\user-controls\user-controls2.resx">
       <DependentUpon>user-controls2.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\img-interface\" />
+    <Folder Include="thread\data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
