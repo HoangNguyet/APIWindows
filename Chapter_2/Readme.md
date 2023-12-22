@@ -18,5 +18,3 @@ Các thuật toán mà ứng dụng hỗ
    <li>FSRTN(Thời gian thực thi ngắn nhất hiện tại)</li>
 <ul>
 <br>
-
-Note: Pjorect đươc viết trên môi trường dotnet nên chỉ có thể chạy trên hệ điều hành windows
